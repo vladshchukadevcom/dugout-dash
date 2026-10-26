@@ -1,0 +1,35 @@
+/* Dugout Dash legal/support site: the game's look (graphite, warm glow, brass). */
+:root {
+  --ground: #f6f3ee; --card: #ffffff; --ink: #1d1b18; --sub: #5d574e; --line: #e4ddd1;
+  --brass: #9a7637; --brass-hi: #7d5d26;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ground: #0c0c0d; --card: #18171a; --ink: #ece8e1; --sub: #b9b2a7; --line: #2c2924;
+          --brass: #c9a66c; --brass-hi: #e2c592; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  background-image: radial-gradient(ellipse 120% 50% at 50% 0%, rgba(201,166,108,.16), transparent 70%);
+  background-repeat: no-repeat;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+header img { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+header a { color: inherit; text-decoration: none; }
+.brand { font: 800 22px/1.1 -apple-system, "SF Pro Display", sans-serif; letter-spacing: .02em; text-transform: uppercase; }
+.tag { color: var(--brass); font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+h1 { font: 800 clamp(30px, 6vw, 42px)/1.1 -apple-system, "SF Pro Display", sans-serif; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+p, li { color: var(--sub); }
+strong { color: var(--ink); }
+a { color: var(--brass-hi); }
+.meta { color: var(--sub); font-size: 15px; margin-bottom: 24px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 24px; margin: 16px 0; }
+.card h2 { margin-top: 0; }
+nav { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 15px; }
+.button { display: inline-block; background: var(--brass); color: #141210; font-weight: 700; padding: 12px 20px;
+          border-radius: 999px; text-decoration: none; }
+footer { margin-top: 24px; color: var(--sub); font-size: 13px; }
